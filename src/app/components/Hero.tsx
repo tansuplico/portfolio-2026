@@ -50,8 +50,11 @@ export default function Hero({
 
       <div className="relative flex min-h-screen flex-col">
         {/* Top nav */}
-        <header className="flex items-center justify-between px-6 py-6 sm:px-10 sm:py-8">
-          <nav aria-label="Social links" className="flex items-center gap-5">
+        <header className="flex flex-nowrap items-center justify-between gap-2 px-4 py-6 sm:gap-4 sm:px-10 sm:py-8">
+          <nav
+            aria-label="Social links"
+            className="flex shrink-0 items-center gap-3 sm:gap-5"
+          >
             {socials.map((social) => (
               <a
                 key={social.label}
@@ -68,7 +71,7 @@ export default function Hero({
 
           <a
             href={`mailto:${email}`}
-            className={`${jetbrainsMono.className} rounded-md border border-neutral-700 px-4 py-2 text-xs tracking-widest text-neutral-300 transition-colors hover:border-neutral-500 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50`}
+            className={`${jetbrainsMono.className} shrink-0 rounded-md border border-neutral-700 px-2.5 py-1.5 text-[9px] tracking-wide text-neutral-300 transition-colors hover:border-neutral-500 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 sm:px-4 sm:py-2 sm:text-xs sm:tracking-widest`}
           >
             {email.toUpperCase()}
           </a>
@@ -78,12 +81,12 @@ export default function Hero({
         <div className="flex flex-1 flex-col items-center justify-center px-4 text-center">
           <CursorReveal size={320} color="#8A2BE2" className="w-full">
             <h1
-              className={`${anton.className} w-full whitespace-nowrap text-center uppercase leading-[0.85] tracking-tight`}
+              className={`${anton.className} w-full text-center uppercase leading-[0.9] tracking-tight sm:whitespace-nowrap sm:leading-[0.85]`}
             >
               <span
-                className="block"
+                className="block wrap-break-words"
                 style={{
-                  fontSize: "clamp(3.5rem, 14vw, 13.5rem)",
+                  fontSize: "clamp(2.5rem, 13vw, 13.5rem)",
                 }}
               >
                 {name}

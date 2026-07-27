@@ -68,25 +68,6 @@ export default function ProjectCard({ project, onOpen }: ProjectCardProps) {
         className="absolute inset-0 bg-linear-to-t from-black/85 via-black/20 to-black/40"
       />
 
-      {/* Eyebrow + arrow */}
-      <div
-        className={`${jetbrainsMono.className} relative flex items-start justify-between p-4 text-[10px] uppercase tracking-widest text-white/70 sm:p-5`}
-      >
-        <span>{project.category}</span>
-        <svg
-          width="14"
-          height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          className="shrink-0 -translate-y-0.5 translate-x-0.5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-          aria-hidden="true"
-        >
-          <path d="M7 17 17 7M7 7h10v10" />
-        </svg>
-      </div>
-
       {/* Title */}
       <h3
         className={`${anton.className} absolute bottom-4 left-4 right-4 text-3xl uppercase leading-[0.95] tracking-tight text-white sm:bottom-5 sm:left-5 sm:text-4xl`}

@@ -62,7 +62,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4 transition-opacity"
+      className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/85 px-4 py-10 transition-opacity sm:items-center"
       style={{
         opacity: isVisible ? 1 : 0,
         transitionDuration: `${TRANSITION_MS}ms`,
@@ -80,15 +80,6 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           transitionDuration: `${TRANSITION_MS}ms`,
         }}
       >
-        <button
-          type="button"
-          onClick={onClose}
-          aria-label="Close"
-          className={`${jetbrainsMono.className} absolute -top-9 right-0 text-xs uppercase tracking-widest text-white/70 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 sm:-top-11`}
-        >
-          Close ✕
-        </button>
-
         <div className="relative w-full overflow-hidden rounded-lg bg-neutral-900">
           <Image
             src={mountedProject.image}
@@ -96,6 +87,15 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             sizes="(min-width: 1024px) 900px, 100vw"
             className="h-auto max-h-[75vh] w-full object-contain"
           />
+
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close"
+            className={`${jetbrainsMono.className} absolute right-3 top-3 rounded-full bg-black/60 px-3 py-1.5 text-xs uppercase tracking-widest text-white/80 backdrop-blur transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60`}
+          >
+            Close ✕
+          </button>
         </div>
 
         <div className="mt-4 flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">

@@ -10,7 +10,7 @@ export default function Footer({
   year = new Date().getFullYear(),
 }: FooterProps) {
   return (
-    <footer className="flex items-center justify-between bg-black px-6 py-6 text-white sm:px-10 sm:py-8">
+    <footer className="flex flex-col items-center gap-3 bg-black px-6 py-6 text-center text-white sm:flex-row sm:items-center sm:justify-between sm:gap-0 sm:px-10 sm:py-8 sm:text-left">
       <p
         className={`${jetbrainsMono.className} text-xs uppercase tracking-widest text-neutral-500 sm:text-sm`}
       >
