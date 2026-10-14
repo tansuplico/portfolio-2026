@@ -5,6 +5,7 @@ import { anton, jetbrainsMono } from "../lib/fonts";
 import ProjectCard, { type Project } from "../ProjectCard";
 import ProjectModal from "../ProjectModal";
 
+import verifast from "../assets/verifast.png";
 import apiis from "../assets/apiis.png";
 import vacay from "../assets/vacay.png";
 import xtrack from "../assets/xtrack.png";
@@ -13,6 +14,13 @@ import dailydo from "../assets/dailydo.png";
 import splitscale from "../assets/splitscale.png";
 
 const DEFAULT_PROJECTS: Project[] = [
+  {
+    title: "Verifast Student+",
+    category: "UI Design · Mobile App Development",
+    href: "#",
+    span: "half",
+    image: verifast,
+  },
   {
     title: "APIIS Learning Management System",
     category: "UI Design · System Development",
